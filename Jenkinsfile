@@ -8,12 +8,13 @@ pipeline {
 
             steps {
                 sh 'npm install'
+                sh 'npm audit fix'
             }
         }
     
         stage ('Test') {
             steps {
-                    sh './jenkins/scripts/test.sh'
+                    sh 'npm test'//'./jenkins/scripts/test.sh'
                 }
         }
     }
