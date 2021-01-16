@@ -21,7 +21,7 @@ pipeline {
         stage ('Compile') {
             steps {
                     sh 'npm run dev'//'./jenkins/scripts/test.sh'
-                    sh 'npm run test'
+                    //sh 'npm run test'
                 }
         }
     }
