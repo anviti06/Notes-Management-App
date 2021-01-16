@@ -7,27 +7,23 @@ pipeline {
         stage ('Build') {
 
             steps {
+                sh 'npm install'
                 sh 'cd client'
                 sh 'npm install'
                 sh 'cd ..'
             }
         }
     
-        //stage ('Test') {
-          //  steps {
-            //        sh 'npm test'//'./jenkins/scripts/test.sh'
-            //    }
-        //}
-        stage ('Compile') {
+        stage ('Test') {
             steps {
-                    sh 'cd client'
-                    sh 'npm install'
-                    sh 'cd ..'
                     sh 'npm run test'
-
-                    //sh './jenkins/scripts/test.sh'
-                    //sh 'npm run test'
-                }
+            }
+        }
+        stage ('Deliver') {
+            steps {
+                    sh 'npm run dev'
+                    sh 'kill'
+            }
         }
     }
 
