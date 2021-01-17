@@ -16,7 +16,10 @@ pipeline {
     
         stage ('Test') {
             steps {
-                    sh 'npm run test'
+                 sh 'cd client'
+                 sh 'npm install'
+                 sh 'cd ..'    
+                 sh 'npm run test'
             }
         }
         //stage ('Deliver') {
