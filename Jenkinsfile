@@ -19,12 +19,12 @@ pipeline {
                     sh 'npm run test'
             }
         }
-        stage ('Deliver') {
-            steps {
-                    sh 'npm run dev'
-                    sh 'kill'
-            }
-        }
+        //stage ('Deliver') {
+            //steps {
+                    //sh 'npm run dev'
+                    //sh 'kill'
+            //}
+        //}
     }
 
 }
