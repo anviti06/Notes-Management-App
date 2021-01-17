@@ -21,6 +21,8 @@ pipeline {
                 sh 'npm install'
                 sh 'cd ..'
                 sh 'npm run test'
+                sh 'rm -rf node_modules/'
+                sh 'rm -rf client/node_modules'
             }
         }
         //stage ('Deliver') {
