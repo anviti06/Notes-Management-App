@@ -8,9 +8,10 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [10.x]  
+    
     env:
-      ci: false
+      NODE_ENV: "ci"    
       
     steps:
     - uses: actions/checkout@v1
