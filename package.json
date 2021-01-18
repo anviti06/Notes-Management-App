@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "jest": {
-    "setupTestFrameworkScriptFile": "./tests/setup.js"
+    "setupTestFrameworkScriptFile": "./tests/setup.js",
+    "globalTeardown": "./tests/teardown.js"
   },
   "scripts": {
     "start": "node index.js",
