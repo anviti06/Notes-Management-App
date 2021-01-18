@@ -10,7 +10,7 @@ jobs:
       matrix:
         node-version: [10.x]
     env:
-      ci: true
+      ci: false
       
     steps:
     - uses: actions/checkout@v1
