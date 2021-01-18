@@ -1,5 +1,8 @@
 language: node_js
 node_js:
   - "stable"
-scripts:
-  - "npm install"
+script:
+  - npm install
+  - cd client
+  - npm install
+  - cd ..
