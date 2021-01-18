@@ -30,7 +30,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/noteFolder')(app);
 
-if (['production', 'ci'].includes(process.env.NODE_ENV)) {
+if (['production', 'ci'].includes(process.env.NODE_ENV) || process.env.CI==true) {
   app.use(express.static('client/build'));
 
   const path = require('path');
