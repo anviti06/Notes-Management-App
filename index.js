@@ -44,3 +44,5 @@ app.listen(PORT, () => {
   console.log(`Listening on port`, PORT);
   console.log('process_env:',process.env.NODE_ENV);
 });
+let server=process;
+module.exports=server;
