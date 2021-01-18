@@ -10,7 +10,7 @@ export default function (state = [], action) {
             return action.payload;
         case DELETE_NOTE:
             const arr = state.filter(note => {
-                if (note.title == action.payload)
+                if (note.title === action.payload)
                     return 0
                 else
                     return 1
