@@ -42,4 +42,6 @@ if (['production', 'ci'].includes(process.env.NODE_ENV)) {
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Listening on port`, PORT);
+  console.log('process_env:',process.env.NODE_ENV);
+  console.log('process_env2:',process.env);
 });
