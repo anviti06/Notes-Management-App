@@ -39,8 +39,8 @@ jobs:
     
     
     # 4: run test command
-    - name: Run test command
-      run: npm run test    
+    #- name: Run test command
+    #  run: npm run test    
 
 
     #5 Deploy step  
@@ -49,4 +49,5 @@ jobs:
         git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
     - name: Deploy to Heroku
       run: |
+        git push origin master
         git push heroku master
