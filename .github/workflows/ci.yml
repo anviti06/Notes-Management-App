@@ -38,9 +38,9 @@ jobs:
       run: npm run build
     
     
-    # 4: run test command
-    #- name: Run test command
-    #  run: npm run test    
+     #4: run test command
+    - name: Run test command
+      run: npm run test    
 
 
     #5 Deploy step  
